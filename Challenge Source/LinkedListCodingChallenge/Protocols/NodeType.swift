@@ -25,6 +25,7 @@ public protocol NodeType: class {
     init(element: Element)
 }
 
+// MARK: - Convenience Initializers
 extension NodeType {
     
     public init(element: Element, before nextNode: Self?) {

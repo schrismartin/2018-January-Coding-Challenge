@@ -25,6 +25,7 @@ public protocol LinkedListType: Sequence where Iterator: LinkedListIteratorProto
     mutating func append(_ element: Element)
 }
 
+// MARK: - LinkedListType Conformance
 extension LinkedListType {
     
     /// The last node in the sequence
@@ -36,24 +37,6 @@ extension LinkedListType {
         }
         
         return node
-    }
-    
-    /// Returns a value less than or equal to the number of elements in
-    /// the sequence, nondestructively.
-    ///
-    /// - Complexity: O(*n*)
-    public var underestimatedCount: Int {
-        
-        guard var currentNode = head else { return 0 }
-        var count = 1
-        
-        while let nextNode = currentNode.next {
-            
-            currentNode = nextNode
-            count += 1
-        }
-        
-        return count
     }
     
     public mutating func prepend(_ element: Self.Element) {
@@ -72,7 +55,26 @@ extension LinkedListType {
     }
 }
 
+// MARK: - Collection Conformance
 extension LinkedListType {
+    
+    /// Returns a value less than or equal to the number of elements in
+    /// the sequence, nondestructively.
+    ///
+    /// - Complexity: O(*n*)
+    public var underestimatedCount: Int {
+        
+        guard var currentNode = head else { return 0 }
+        var count = 1
+        
+        while let nextNode = currentNode.next {
+            
+            currentNode = nextNode
+            count += 1
+        }
+        
+        return count
+    }
 
     public func makeIterator() -> Iterator {
 

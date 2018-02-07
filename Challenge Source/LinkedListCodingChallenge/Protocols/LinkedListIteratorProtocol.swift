@@ -17,6 +17,7 @@ protocol LinkedListIteratorProtocol: IteratorProtocol where Self.Element == Node
     init(currentNode: Node?)
 }
 
+// MARK: - IteratorProtocol Conformance
 extension LinkedListIteratorProtocol {
     
     public mutating func next() -> Element? {

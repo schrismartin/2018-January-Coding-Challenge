@@ -84,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				8EB04D7C2020E16600EF32D2 /* LinkedListCodingChallenge.h */,
-				8EB04D932020E17300EF32D2 /* LinkedList.swift */,
-				B4D994FD202901FD005BE564 /* Node.swift */,
+				B41C7F76202A8E37004CCEA4 /* Implementations */,
 				B458E8022028F890007C53B7 /* Protocols */,
 				8EB04D7D2020E16600EF32D2 /* Info.plist */,
 			);
@@ -99,6 +98,15 @@
 				8EB04D892020E16600EF32D2 /* Info.plist */,
 			);
 			path = LinkedListCodingChallengeTests;
+			sourceTree = "<group>";
+		};
+		B41C7F76202A8E37004CCEA4 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				8EB04D932020E17300EF32D2 /* LinkedList.swift */,
+				B4D994FD202901FD005BE564 /* Node.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		B458E8022028F890007C53B7 /* Protocols */ = {
