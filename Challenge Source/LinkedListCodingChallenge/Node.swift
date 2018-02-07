@@ -18,18 +18,3 @@ public final class Node<Element>: NodeType {
         self.element = element
     }
 }
-
-extension Node {
-    
-    public convenience init(element: Element, before nextNode: Node?) {
-        
-        self.init(element: element)
-        next = nextNode
-    }
-    
-    public convenience init(element: Element, after previousNode: Node?) {
-        
-        self.init(element: element)
-        previousNode?.next = self
-    }
-}
